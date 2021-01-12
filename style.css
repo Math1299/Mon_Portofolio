@@ -179,3 +179,91 @@ body {
     transition: bottom 300ms ease, transform 300ms 300ms ease;
   }
 }
+/*  ------------- ACCUEIL------------------ */
+.accueil {
+  background: url(ressources/accueil.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  height: 100vh;
+  min-height: 900px;
+  width: calc(100% - 300px); /*POUR PLACER APRES LA NAV-GAUCHE */
+  position: relative;
+  margin-left: auto;
+}
+h1 {
+  font-size: 8.2rem;
+  font-family: "Abril Fatface", sans-serif;
+  margin: 0 60px;
+  padding-top: 215px;
+}
+.txt-animation {
+  font-size: 3rem;
+  margin: 10px 0 10px 60px;
+}
+.btn-acc {
+  display: inline-flex;
+  width: 200px;
+  height: 50px;
+  text-decoration: none;
+  color: #f1f1f1;
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  margin: 10px 0 0 0;
+  font-size: 1.8rem;
+}
+.btn-acc1 {
+  margin: 10px 0 0 60px;
+}
+.btn-acc2 {
+  background: transparent;
+  color: #000;
+  font-weight: 700;
+  border: 2px solid #000;
+}
+.medias {
+  display: flex;
+  margin: 30px 0 0 60px;
+}
+.media {
+  width: 60px;
+  height: 60px;
+  background: #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.media2 {
+  background-color: transparent;
+  border: 2px solid #333;
+}
+.icone-medias {
+  width: 30px;
+}
+.btn-round {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 0 #333;
+  background: #333;
+  animation: pulse 1.3s infinite;
+}
+@keyframes pulse {
+  to {
+    box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.01);
+  }
+}
+.logo-btn-round-accueil {
+  width: 35px;
+}

@@ -79,6 +79,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 .logo-circle {
   width: 100px;
@@ -266,4 +267,138 @@ h1 {
 }
 .logo-btn-round-accueil {
   width: 35px;
+}
+/*MEDIA ACCUEIL*/
+
+@media screen and (max-width: 1300px) {
+  .accueil {
+    width: 100%;
+    background-position: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .accueil {
+    height: 700px;
+  }
+  h1 {
+    font-size: 7rem;
+    margin: 0 30px 0 30px;
+    padding-top: 100px;
+  }
+  .accueil p {
+    margin: 20px 0 20px 30px;
+  }
+  .medias {
+    margin-left: 30px;
+  }
+  .btn-acc1 {
+    margin: 20px 0 20px 30px;
+  }
+  .btn-round {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .accueil {
+    height: 600px;
+    min-height: 0;
+  }
+  h1 {
+    font-size: 5rem;
+    margin: 0 20px;
+  }
+  .accueil p {
+    font-size: 2rem;
+  }
+
+  .btn-round-menu {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 3.5rem;
+    margin: 0 20px;
+  }
+  .accueil p {
+    font-size: 1.6rem;
+  }
+  .btn-acc {
+    width: 120px;
+    font-size: 1.3rem;
+    height: 40px;
+  }
+  .btn-round-menu {
+    width: 60px;
+    height: 60px;
+    margin: 10px 0 0 5px;
+  }
+  .btn-acc1 {
+    margin: 10px 0 0 30px;
+  }
+  .media {
+    width: 40px;
+    height: 40px;
+  }
+  .icone-medias {
+    width: 20px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .btn-round-menu {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 0 5px;
+  }
+  .btn-acc1 {
+    margin: 10px 0 0 30px;
+  }
+  .media {
+    width: 40px;
+    height: 40px;
+  }
+  .icone-medias {
+    width: 20px;
+  }
+  .container-line {
+    width: 25px;
+    height: 38px;
+  }
+  .line {
+    height: 3px;
+  }
+  .line::before {
+    height: 3px;
+    bottom: 8px;
+  }
+  .line::after {
+    height: 3px;
+    top: 8px;
+  }
+}
+.accueil {
+  height: 500px;
+}
+h1 {
+  margin: 0 30px 0 5px;
+  padding-top: 100px;
+}
+.accueil p {
+  margin: 30px 0 0 5px;
+}
+.btn-acc {
+  width: 100px;
+  font-size: 1.2rem;
+  height: 35px;
+  margin: 30px 0 0 5px;
+}
+.medias {
+  margin: 30px 0 0 5px;
+}
+.icone-medias {
+  width: 20px;
 }

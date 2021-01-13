@@ -402,3 +402,8 @@ h1 {
 .icone-medias {
   width: 20px;
 }
+@media screen and (max-width: 380px) {
+  .txt-animation {
+    font-size: 12px !important;
+  }
+}

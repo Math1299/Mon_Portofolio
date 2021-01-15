@@ -545,3 +545,111 @@ h1 {
     font-size: 1.7rem;
   }
 }
+
+/*-------------------------Section Portfolio------------------*/
+
+.portfolio {
+  width: 100%;
+}
+.titre-port {
+  text-align: center;
+  padding: 50px 0 50px 300px;
+  font-size: 5rem;
+}
+.container-portfolio {
+  width: 100%;
+  height: auto;
+  margin: 0 auto 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-left: 300px;
+}
+.item {
+  margin: 20px;
+  width: 420px;
+  height: 400px;
+  background: #f0f2f0;
+  color: #333;
+  transition: transform 0.3s ease-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.item:hover {
+  transform: translateY(-5px);
+}
+.cont-img-port {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+.cont-img-port img {
+  width: 100%;
+  height: auto;
+}
+.item h3 {
+  padding: 10px 10px 0;
+  font-size: 2.2rem;
+}
+.item p {
+  padding: 10px 10px 0;
+  font-size: 1.5rem;
+}
+.btn-projets {
+  display: block; /* CAR IL S AGIT D UN LIEN*/
+  margin: 10px;
+  width: 180px;
+  height: 50px;
+  line-height: 50px; /* PERMET DE LE CENTRER SUR Y*/
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  font-size: 1.5rem;
+}
+.btn-projets::after {
+  content: "";
+  height: 240px;
+  width: 100px;
+  background: rgba(255, 255, 255, 0.4);
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg); /* ANIMATION SHINNY SUR LES BOUTONS*/
+  top: -50%;
+  left: -150px;
+}
+.btn-projets:hover::after {
+  /* ANIMATION SHINNY SUR LES BOUTONS*/
+  transform: translateX(400px);
+  transition: transform 0.3s 0.1s linear;
+}
+/*Media Portfolio*/
+
+@media screen and (max-width: 1300px) {
+  .container-portfolio {
+    padding-left: 0;
+  }
+  .titre-port {
+    font-size: 4rem;
+    margin: 50px 0 50px 0;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .titre-port {
+    margin: 10px 0;
+    padding: 30px 0;
+  }
+  .cont-img-port {
+    height: auto;
+  }
+}
+@media screen and (max-width: 340px) {
+  .item {
+    height: 380px;
+  }
+}

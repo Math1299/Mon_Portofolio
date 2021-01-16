@@ -821,6 +821,7 @@ h1 {
   height: 50px;
   border-radius: 50%;
   border: 1px solid #333;
+  box-shadow: 0 0 0 5px rgba(241, 241, 241, 0.9);
   background: #f1f1f1;
   display: flex;
   justify-content: center;
@@ -838,7 +839,7 @@ h1 {
 .bloc {
   width: 100%;
   height: 200px;
-  margin-bottom: 3.75rem;
+  margin-bottom: 3.8rem;
   cursor: pointer;
   border: 1px solid #333;
   position: relative;
@@ -855,4 +856,126 @@ h1 {
 }
 .contenu-bloc:hover {
   transform: translate(0, 0);
+}
+.bloc1 {
+  background: #fb97a0;
+}
+.bloc2 {
+  background: #bfe2ca;
+}
+.bloc3 {
+  background: #a6daef;
+}
+.bloc4 {
+  background: #d0e2ec;
+}
+.titre-section-bloc {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
+
+.txt-section {
+  font-size: 1.4rem;
+}
+
+/* Media section travail exp */
+@media screen and (max-width: 1300px) {
+  .travail-exp {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .barre-verticale {
+    height: 1200px;
+    margin-left: 60px;
+  }
+  .bloc {
+    height: 250px;
+  }
+  .flex-cont-bloc-exp {
+    margin-right: 30px;
+  }
+
+  @media screen and (max-width: 520px) {
+    .txt-section {
+      font-size: 1.6rem;
+    }
+    .bloc {
+      height: 400px;
+    }
+    .barre-verticale {
+      height: 1800px;
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .barre-verticale {
+    height: 1200px;
+    margin-left: 60px;
+  }
+  .bloc {
+    height: 250px;
+  }
+  .flex-cont-bloc-exp {
+    margin-right: 30px;
+  }
+
+  @media screen and (max-width: 380px) {
+    .txt-section {
+      font-size: 1.3rem;
+    }
+    .titre-section-bloc {
+      font-size: 2rem;
+    }
+  }
+}
+
+/* Section parallax */
+
+.section-parallax {
+  width: 100%;
+  height: 250px;
+  background: url(ressources/accueil.jpg) no-repeat right / cover fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px dashed #333;
+  border-bottom: 1px dashed #333;
+}
+.txt-part {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0 50px;
+}
+.txt-part:nth-child(1) {
+  padding-left: 300px;
+}
+
+/* Media section parallax */
+
+@media screen and (max-width: 1300px) {
+  .txt-part {
+    font-size: 2.5rem;
+    margin: 0 30px;
+  }
+  .txt-part:nth-child(1) {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .txt-part {
+    font-size: 2.2rem;
+    margin: 0 25px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .section-parallax {
+    flex-direction: column;
+  }
+  .txt-part {
+    font-size: 2rem;
+    margin: 20px 0;
+  }
 }

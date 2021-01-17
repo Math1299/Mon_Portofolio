@@ -61,3 +61,31 @@ for (let i = 0; i < input_fields.length; i++) {
     }
   });
 }
+
+// animation GSAP + ScrollMagic
+
+const navbar = document.querySelector(".nav-gauche");
+const titre = document.querySelector("h1");
+const btn = document.querySelectorAll(".btn-acc");
+const btnMedias = document.querySelectorAll(".media");
+const btnRoundAccueil = document.querySelector(".btn-round");
+
+const TL1 = gsap.timeline({ paused: true });
+
+TL1.to(navbar, { left: "0px", ease: Power3.easeOut, duration: 0.6 });
+TL1.from(titre, { y: -50, opacity: 0, ease: Power3.easeOut, duration: 0.4 });
+TL1.staggerFrom(btn, 1, { opacity: 0 }, 0.2, "-=0.30");
+TL1.staggerFrom(btnMedias, 1, { opacity: 0 }, 0.2, "-=0.75");
+TL1.from(
+  btnRoundAccueil,
+  {
+    y: -50,
+    opacity: 0,
+    ease: Power3.easeOut,
+    duration: 0.4,
+  },
+  "-=1"
+);
+window.addEventListener("load", () => {
+  TL1.play();
+});

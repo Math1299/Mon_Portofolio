@@ -89,3 +89,27 @@ TL1.from(
 window.addEventListener("load", () => {
   TL1.play();
 });
+
+// Animation ScrollMagic GSAP presentation
+
+const presentationContainer = document.querySelector(".presentation");
+const titrePres = document.querySelector(".titre-pres");
+const presGauche = document.querySelector(".pres-gauche");
+const listePres = document.querySelectorAll(".item-liste");
+
+const tlpres = new TimelineMax();
+
+tlpres.from(titrePres, { y: -200, opacity: 0, duration: 0.6 });
+tlpres.from(presGauche, { y: -20, opacity: 0, duration: 0.6 }, "-=0.5");
+tlpres.staggerFrom(listePres, 1, { opacity: 0 }, 0.2, "-=0.5");
+
+const controller = new ScrollMagic.Controller();
+
+const scene = new ScrollMagic.Scene({
+  triggerElement: presentationContainer,
+  triggerHook: 0.5,
+  reverse: false,
+})
+  .setTween(tlpres)
+  .addIndicators()
+  .addTo(controller);

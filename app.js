@@ -111,5 +111,84 @@ const scene = new ScrollMagic.Scene({
   reverse: false,
 })
   .setTween(tlpres)
-  .addIndicators()
+  // .addIndicators()
+  .addTo(controller);
+// Anim portfolio
+
+const portfolioContainer = document.querySelector(".portfolio");
+const titrePortfolio = document.querySelector(".titre-port");
+const itemPortfolio = document.querySelectorAll(".vague1");
+
+const tlPortfolio = new TimelineMax();
+
+tlPortfolio
+  .from(titrePortfolio, { y: -50, opacity: 0, duration: 0.5 })
+  .staggerFrom(itemPortfolio, 1, { opacity: 0 }, 0.2, "-=0.5");
+
+const scene2 = new ScrollMagic.Scene({
+  triggerElement: portfolioContainer,
+  triggerHook: 0.5,
+  reverse: false,
+})
+  .setTween(tlPortfolio)
+  // .addIndicators()
+  .addTo(controller);
+
+// Vague 2
+
+const itemPortfolio2 = document.querySelectorAll(".vague2");
+
+const tlPortfolio2 = new TimelineMax();
+
+tlPortfolio2.staggerFrom(itemPortfolio2, 1, { opacity: 0 }, 0.2, "-=0.5");
+
+const scene3 = new ScrollMagic.Scene({
+  triggerElement: itemPortfolio,
+  triggerHook: 0.2,
+  reverse: false,
+})
+  .setTween(tlPortfolio2)
+  // .addIndicators()
+  .addTo(controller);
+
+// Vague 3
+
+const itemPortfolio3 = document.querySelectorAll(".vague3");
+
+const tlPortfolio3 = new TimelineMax();
+
+tlPortfolio3.staggerFrom(itemPortfolio3, 1, { opacity: 0 }, 0.2, "-=0.5");
+
+const scene4 = new ScrollMagic.Scene({
+  triggerElement: itemPortfolio2,
+  triggerHook: 0.2,
+  reverse: false,
+})
+  .setTween(tlPortfolio3)
+  // .addIndicators()
+  .addTo(controller);
+
+// Animation range
+
+const sectionComp = document.querySelector(".section-range");
+const titreComp = document.querySelector(".titre-exp");
+const allLabel = document.querySelectorAll(".label-skill");
+const allPourcent = document.querySelectorAll(".number-skill");
+const allBarres = document.querySelectorAll(".barre-skill");
+const allShadowBarres = document.querySelectorAll(".barre-grises");
+
+const tlCompetences = new TimelineMax();
+
+tlCompetences
+  .from(titreComp, { opacity: 0, duration: 0.6 })
+  .staggerFrom(allLabel, 0.5, { y: -50, opacity: 0 }, 0.1, "-=0.5")
+  .staggerFrom(allPourcent, 0.5, { y: -10, opacity: 0 }, 0.1, "-=1")
+  .staggerFrom(allShadowBarres, 0.5, { y: -10, opacity: 0 }, 0.1, "-=1")
+  .staggerFrom(allBarres, 0.5, { y: -10, opacity: 0 }, 0.1, "-=1");
+
+const scene5 = new ScrollMagic.Scene({
+  triggerElement: sectionComp,
+  reverse: false,
+})
+  .setTween(tlCompetences)
   .addTo(controller);
